@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mas Hendra</title>
+</head>
+<body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#">Mas Hendra</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li ><a href="#">Mas Hendra</a></li>
+        <li class="hp active"><a href="#">Blog</a></li>
+        <li class="hp"><a href="#">Products</a></li>
+        <li class="hp"><a href="#">About</a></li>
+        <li class="hp"><a href="#">Forum</a></li>
+        <li class="hp"><a href="#">Login</a></li>
+        <li class="men-but" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      </ul>
+    </nav>
+    <div class="card">
+    </div>
+    <div class="artikel">
+      <h1>Terbaru di mashendra.com</h1>
+      <p> Baca Update Artikel dan Info Terbaru Seputar Teknologi yang Selalu Update Tiap harinya</p>
+    </div>
+    <div class="maincard">
+    <div class="card1">
+      <img src="gambar.jpg" alt="Card Image">
+      <button class="button button1">Shadow Button</button>
+     </div>
+
+      <div class="card1">
+        <img src="gambar.jpg" alt="Card Image">
+        <h3>Card Title</h3>
+        <p>This is a description of the card content.</p>
+        </div>
+      
+        <div class="card1">
+          <img src="gambar.jpg" alt="Card Image">
+          <h3>Card Title</h3>
+          <p>This is a description of the card content.</p>
+          </div>
+          <div class="card1">
+            <img src="gambar.jpg" alt="Card Image">
+            <h3>Card Title</h3>
+            <p>This is a description of the card content.</p>
+            </div>
+          
+            <div class="card1">
+              <img src="gambar.jpg" alt="Card Image">
+              <h3>Card Title</h3>
+              <p>This is a description of the card content.</p>
+              </div>
+              <div class="card1">
+                <img src="gambar.jpg" alt="Card Image">
+                <h3>Card Title</h3>
+                <p>This is a description of the card content.</p>
+                </div>
+                <div class="card1">
+                  <img src="gambar.jpg" alt="Card Image">
+                  <h3>Card Title</h3>
+                  <p>This is a description of the card content.</p>
+                  </div>
+                  <div class="card1">
+                    <img src="gambar.jpg" alt="Card Image">
+                    <h3>Card Title</h3>
+                    <p>This is a description of the card content.</p>
+                    </div>
+                    <div class="card1">
+                      <img src="gambar.jpg" alt="Card Image">
+                      <h3>Card Title</h3>
+                      <p>This is a description of the card content.</p>
+                      </div>
+                      <div class="card1">
+                        <img src="gambar.jpg" alt="Card Image">
+                        <h3>Card Title</h3>
+                        <p>This is a description of the card content.</p>
+                        </div>
+                      </div>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+
+      }
+    </script>
+</body>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6fa;
+}
+body{
+  min-height: 100vh;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+nav a:hover{
+  background-color: #f0f0f0;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0,  0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.men-but{
+  display: none;
+}
+@media(max-width: 800px){
+  .hp{
+    display: none;
+  }
+  .men-but{
+    display: block;
+  }
+}
+@media(max-width:400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+.card {
+  background-color:#0fb9b1; /* White background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 5px; /* Rounded corners */
+  margin:10px; /* Spacing between cards */
+  padding:10px; /* Padding inside the card */
+  width: 98%; /* Adjust width as needed */
+  height: 700px;
+  
+}
+
+.artikel{
+  margin: 20px;
+  padding: 10px 10px;
+}
+.artikel h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-inline-start: 10px;
+}
+.artikel p{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a5b1c2;
+}
+.card1 {
+  background-color: #fff; /* White background */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  padding: 10px;
+  margin: 10px ;
+  display: inline-block;
+  border-radius: 5px; /* Rounded corners */
+  width: 300px; /* Adjust width as needed */
+  height: 400px;
+}
+
+.card1 img {
+  width: 100%; /* Stretch image to fill container width */
+  margin-bottom: 0px; /* Add space below image */
+  padding: 10;
+}
+.maincard{
+  text-align: center;
+}
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+</html>
